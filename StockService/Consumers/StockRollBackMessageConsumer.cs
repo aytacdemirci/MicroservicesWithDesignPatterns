@@ -1,7 +1,7 @@
 ﻿using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Shared.Events;
+using Shared.Messages;
 using StockService.Models;
 using System;
 using System.Collections.Generic;
@@ -10,20 +10,20 @@ using System.Threading.Tasks;
 
 namespace StockService.Consumers
 {
-    public class PaymentFailedEventConsumer : IConsumer<PaymentFailedEvent>
+    public class StockRollBackMessageConsumer : IConsumer<IStockRollBackMessage>
     {
         private readonly AppDbContext _context;
-        private ILogger<PaymentFailedEventConsumer> _logger;
+        private ILogger<StockRollBackMessageConsumer> _logger;
 
-        public PaymentFailedEventConsumer(AppDbContext context, ILogger<PaymentFailedEventConsumer> logger)
+        public StockRollBackMessageConsumer(AppDbContext context, ILogger<StockRollBackMessageConsumer> logger)
         {
             _context = context;
             _logger = logger;
         }
 
-        public async Task Consume(ConsumeContext<PaymentFailedEvent> context)
+        public async Task Consume(ConsumeContext<IStockRollBackMessage> context)
         {
-            foreach (var item in context.Message.orderItems)
+            foreach (var item in context.Message.OrderItems)
             {
                 var stock = await _context.Stocks.FirstOrDefaultAsync(x => x.ProductId == item.ProductId);
 
@@ -34,7 +34,7 @@ namespace StockService.Consumers
                 }
             }
 
-            _logger.LogInformation($"Stock was released for Order Id ({context.Message.orderId})");
+            _logger.LogInformation($"Stock was released");
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using MassTransit;
 using Microsoft.Extensions.Logging;
 using OrderService.Models;
-using Shared.Events;
+using Shared.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,26 +9,25 @@ using System.Threading.Tasks;
 
 namespace OrderService.Consumers
 {
-    public class StockNotReservedEventConsumer : IConsumer<StockNotReservedEvent>
+    public class OrderRequestCompletedEventConsumer : IConsumer<IOrderRequestCompletedEvent>
     {
         private readonly AppDbContext _context;
 
-        private readonly ILogger<PaymentCompletedEventConsumer> _logger;
+        private readonly ILogger<OrderRequestCompletedEventConsumer> _logger;
 
-        public StockNotReservedEventConsumer(AppDbContext context, ILogger<PaymentCompletedEventConsumer> logger)
+        public OrderRequestCompletedEventConsumer(AppDbContext context, ILogger<OrderRequestCompletedEventConsumer> logger)
         {
             _context = context;
             _logger = logger;
         }
 
-        public async Task Consume(ConsumeContext<StockNotReservedEvent> context)
+        public async Task Consume(ConsumeContext<IOrderRequestCompletedEvent> context)
         {
             var order = await _context.Orders.FindAsync(context.Message.OrderId);
 
             if (order != null)
             {
-                order.Status = OrderStatus.Fail;
-                order.FailMessage = context.Message.Message;
+                order.Status = OrderStatus.Complete;
                 await _context.SaveChangesAsync();
 
                 _logger.LogInformation($"Order (Id={context.Message.OrderId}) status changed : {order.Status}");

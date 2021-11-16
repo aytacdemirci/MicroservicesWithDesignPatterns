@@ -1,3 +1,4 @@
+﻿using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -8,8 +9,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using Shared.MassTransit;
+using Shared.Events;
 using Shared.Settings;
+using StockService.Consumers;
 using StockService.Models;
 using System;
 using System.Collections.Generic;
@@ -31,20 +33,43 @@ namespace StockService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMassTransit(x =>
+            {
+                //Dinleyeceği eventler
+                x.AddConsumer<OrderCreatedEventConsumer>();
+
+                x.AddConsumer<StockRollBackMessageConsumer>();
+
+                x.UsingRabbitMq((context, cfg) =>
+                {
+                    cfg.Host(Configuration.GetConnectionString("RabbitMQ"));
+
+                    //Baglanacagı kuyrugu belirliyoruz
+                    cfg.ReceiveEndpoint(RabbitMQSettingsConst.StockOrderCreatedEventQueueName, e =>
+                    {
+                        e.ConfigureConsumer<OrderCreatedEventConsumer>(context);
+                    });
+
+                    cfg.ReceiveEndpoint(RabbitMQSettingsConst.StockRollBackMessageQueueName, e =>
+                    {
+                        e.ConfigureConsumer<StockRollBackMessageConsumer>(context);
+                    });
+                });
+            });
+
+            services.AddMassTransitHostedService();
             services.AddDbContext<AppDbContext>(options =>
             {
                 options.UseInMemoryDatabase("StockDb");
             });
-            serviceSettings = Configuration.GetSection(nameof(ServiceSettings)).Get<ServiceSettings>();
-            services.AddMassTransitWithRabbitMq();
 
             services.AddControllers();
-
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "StockService", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Stock.API", Version = "v1" });
             });
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
