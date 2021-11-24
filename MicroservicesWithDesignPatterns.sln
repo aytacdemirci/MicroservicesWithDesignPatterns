@@ -3,53 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31605.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{C939ED36-597C-44A0-9939-AC9D11BA41D6}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService", "OrderService\OrderService.csproj", "{E920F841-DC5E-42D2-A05C-3C61DA00224A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentService", "PaymentService\PaymentService.csproj", "{A53F4699-9C72-4510-B552-613E7C99189E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockService", "StockService\StockService.csproj", "{D1020185-227D-40C8-8ABA-7558785E094F}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SagaStateMachineWorkerService", "SagaStateMachineWorkerService\SagaStateMachineWorkerService.csproj", "{66AF82E1-08C8-420E-9BD0-80D9D80CA794}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DrawIO", "DrawIO", "{A6B79FEC-E4E8-4313-B6A2-7A53557E9636}"
-	ProjectSection(SolutionItems) = preProject
-		..\DrowIo\1-OrderRequestComplitedSuccess.PNG = ..\DrowIo\1-OrderRequestComplitedSuccess.PNG
-		..\DrowIo\2-StockNotRezerved.PNG = ..\DrowIo\2-StockNotRezerved.PNG
-		..\DrowIo\3-PaymentFailedEvent.PNG = ..\DrowIo\3-PaymentFailedEvent.PNG
-		..\DrowIo\OrderRequestSucces.drawio = ..\DrowIo\OrderRequestSucces.drawio
-		..\DrowIo\PaymentFailedEvent.drawio = ..\DrowIo\PaymentFailedEvent.drawio
-		..\DrowIo\StockNotRezerded.drawio = ..\DrowIo\StockNotRezerded.drawio
-	EndProjectSection
-EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C939ED36-597C-44A0-9939-AC9D11BA41D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C939ED36-597C-44A0-9939-AC9D11BA41D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C939ED36-597C-44A0-9939-AC9D11BA41D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C939ED36-597C-44A0-9939-AC9D11BA41D6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E920F841-DC5E-42D2-A05C-3C61DA00224A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E920F841-DC5E-42D2-A05C-3C61DA00224A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E920F841-DC5E-42D2-A05C-3C61DA00224A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E920F841-DC5E-42D2-A05C-3C61DA00224A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A53F4699-9C72-4510-B552-613E7C99189E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A53F4699-9C72-4510-B552-613E7C99189E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A53F4699-9C72-4510-B552-613E7C99189E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A53F4699-9C72-4510-B552-613E7C99189E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D1020185-227D-40C8-8ABA-7558785E094F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D1020185-227D-40C8-8ABA-7558785E094F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D1020185-227D-40C8-8ABA-7558785E094F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D1020185-227D-40C8-8ABA-7558785E094F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{66AF82E1-08C8-420E-9BD0-80D9D80CA794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{66AF82E1-08C8-420E-9BD0-80D9D80CA794}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{66AF82E1-08C8-420E-9BD0-80D9D80CA794}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{66AF82E1-08C8-420E-9BD0-80D9D80CA794}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
