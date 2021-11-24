@@ -1,0 +1,159 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\obss\\Desktop\\ÖnemliProjeler\\MicroservicesWithDesignPatterns\\PaymentService\\PaymentService.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\obss\\Desktop\\ÖnemliProjeler\\MicroservicesWithDesignPatterns\\PaymentService\\PaymentService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\obss\\Desktop\\ÖnemliProjeler\\MicroservicesWithDesignPatterns\\PaymentService\\PaymentService.csproj",
+        "projectName": "PaymentService",
+        "projectPath": "C:\\Users\\obss\\Desktop\\ÖnemliProjeler\\MicroservicesWithDesignPatterns\\PaymentService\\PaymentService.csproj",
+        "packagesPath": "C:\\Users\\obss\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\obss\\Desktop\\ÖnemliProjeler\\MicroservicesWithDesignPatterns\\PaymentService\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\obss\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\obss\\Desktop\\ÖnemliProjeler\\MicroservicesWithDesignPatterns\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\Users\\obss\\Desktop\\ÖnemliProjeler\\MicroservicesWithDesignPatterns\\Shared\\Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "MassTransit.AspNetCore": {
+              "target": "Package",
+              "version": "[7.2.4, )"
+            },
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[7.2.4, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\obss\\Desktop\\ÖnemliProjeler\\MicroservicesWithDesignPatterns\\Shared\\Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\obss\\Desktop\\ÖnemliProjeler\\MicroservicesWithDesignPatterns\\Shared\\Shared.csproj",
+        "projectName": "Shared",
+        "projectPath": "C:\\Users\\obss\\Desktop\\ÖnemliProjeler\\MicroservicesWithDesignPatterns\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\obss\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\obss\\Desktop\\ÖnemliProjeler\\MicroservicesWithDesignPatterns\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\obss\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "MassTransit.AspNetCore": {
+              "target": "Package",
+              "version": "[7.1.4, )"
+            },
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[7.1.4, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
