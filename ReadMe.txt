@@ -25,5 +25,5 @@ Message broker’ın ayakta olup olmadığı artık X’i ilgilendirmiyor.
 
  servisi gerekli veri tabanı işlemlerini yaptıktan sonra direkt olarak message broker ile iletişime geçmek yerine event’lerin 
  tutulduğu başka bir tabloya kayıt atıyor. Bu şekilde X servisi tüm bu işlemi bir transactional bütünlükte yapabiliyor. 
- Diğer yandan ise bir message relay, tabloya yazılan bu event’leri alıp message broker’a yolluyor. 
+ Diğer yandan ise bir message relay(Worker Service), tabloya yazılan bu event’leri alıp message broker’a yolluyor. 
  İşlem başarılı ise event’lerin gönderildiğine dair tablodaki kayıtları güncelliyor.
