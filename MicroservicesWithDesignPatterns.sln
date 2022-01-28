@@ -5,17 +5,17 @@ VisualStudioVersion = 16.0.31605.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5F4C85D8-8C1D-43E5-BF52-46604E572B2A}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\Capture.PNG = ..\..\Capture.PNG
+		Capture.PNG = Capture.PNG
 		ReadMe.txt = ReadMe.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService", "OrderService\OrderService.csproj", "{BF0DAC98-5BB8-45B6-8317-91CCD62EE1AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService", "OrderService\OrderService.csproj", "{BF0DAC98-5BB8-45B6-8317-91CCD62EE1AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{21258AB6-4577-400E-80C0-F5974770C88D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{21258AB6-4577-400E-80C0-F5974770C88D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dispatcher", "Dispatcher\Dispatcher.csproj", "{8B95F21A-0D61-4276-B635-F837D6DA395F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dispatcher", "Dispatcher\Dispatcher.csproj", "{8B95F21A-0D61-4276-B635-F837D6DA395F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailService", "MailService\MailService.csproj", "{10AF7CC8-C28B-4739-8969-0CCAE73E4255}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailService", "MailService\MailService.csproj", "{10AF7CC8-C28B-4739-8969-0CCAE73E4255}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

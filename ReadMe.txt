@@ -1,4 +1,5 @@
-﻿Mikroservis mimarisi’nde servislerin birbirine olan bağımlılığını minimize edebilmek (loose coupling)
+﻿https://medium.com/cstech/transactional-outbox-pattern-neden-ve-nasil-fbead861e3c0
+Mikroservis mimarisi’nde servislerin birbirine olan bağımlılığını minimize edebilmek (loose coupling)
 
 Gevşek bağlı (loosely coupled) servisler ile;
  - Bir servisin çalışmadığı durumda diğer servislerin çalışmaya devam edebilmesi,
